@@ -1,0 +1,168 @@
+.single-offer-sections {
+    height: fit-content;
+}
+
+.selection-img {
+    overflow: hidden;
+    grid-row: 1/span 4;
+    border-right: solid 3px black;
+}
+
+.selection-img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.meal-headline {
+    background-image: url(./assets/img/wood-background.jpg);
+    background-size: cover;
+    width: 100%;
+    color: rgb(0, 0, 0, 0.8);
+}
+
+.order-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: fit-content;
+    padding-bottom: 1rem;
+}
+
+.order-section p {
+    font-family: "Protest Revolution";
+    color: rgb(255, 255, 255, 0.9);
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-left: 1rem;
+}
+
+.name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration-line: underline;
+    padding-top: 1rem;
+}
+
+.description {
+    font-size: 1.3rem;
+}
+
+.meal-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.price-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+#dips-section {
+    margin-bottom: 5rem;
+}
+
+#basket-order {
+    background-color: rgba(133, 132, 130, 0.2)
+}
+
+#basket-order-name {
+    background-color: rgba(63, 3, 3, 0.795);
+    padding: 0.2rem;
+    margin-top: 1rem;
+}
+
+.order-detail {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+    border-bottom: solid rgb(255, 255, 255, 0.5);
+}
+
+.order-detail p {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+}
+
+.order-detail button {
+    margin: 0;
+}
+
+.basket-button-total {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.basket-total {
+    width: 100%;
+    font-size: 1.5rem;
+    margin-bottom: 0;
+}
+
+.trashcan {
+    height: 1rem;
+}
+
+#p-total {
+    font-size: 1.5rem;
+    text-decoration: underline;
+    text-decoration-style: double;
+}
+
+#finish-order {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+}
+
+#finish-order-name {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    z-index: 2;
+    padding: 1rem;
+}
+
+#finish-order-details {
+    display: flex;
+    align-items: center;
+}
+
+#finish-order-name p {
+    padding-right: 1rem;
+    padding-left: 0.5rem;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+#p-total-finish {
+    text-decoration: underline;
+    text-decoration-style: double;
+}
+
+#finish-total-button {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: white solid;
+}
+
+#finish-button {
+    color: rgb(255, 255, 255);
+    background-color: rgba(146, 35, 35);
+    border-color: rgba(71, 16, 16);
+}
+

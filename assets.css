@@ -1,0 +1,98 @@
+/*header-section*/
+
+#header-icon {
+    height: 80px;
+    filter: invert();
+}
+
+.header-basket-icon {
+    height: 4rem;
+    filter: invert();
+}
+
+.offer-menu-icon:hover {
+    cursor: pointer;
+}
+
+#basket-amount {
+    background: none;
+    border: none;
+    margin: 0;
+}
+
+#basket-amount-icon {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#amount-counter {
+    justify-content: flex-end;
+    align-items: center;
+    background-color: rgb(209, 93, 27);
+    width: 2rem;
+    height: 2rem;
+}
+
+#count-number {
+    font-family: "Protest Revolution";
+    font-size: 1.5rem;
+    color: white;
+}
+
+/*offer-section*/
+
+#plus-button {
+    width: 1rem;
+    padding: 0.2rem;
+}
+
+#minus-button {
+    width: 1rem;
+    padding: 0.2rem;
+}
+
+/*basket-section*/
+
+.button-delete {
+    width: max-content;
+    margin: 0;
+}
+
+.complete-order {
+    color: rgb(255, 255, 255, 0.8);
+    background-color: rgba(146, 35, 35, 0.685);
+    border-color: rgba(71, 16, 16, 0.993);
+    width: max-content;
+    font-family: "Big Shoulders Stencil";
+    font-size: 1.5rem;
+}
+
+/*overlay-section*/
+
+#finish-order-details button {
+    margin-right: 2rem;
+    line-height: 1.5rem;
+}
+
+#finish-payment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#success-gif {
+    width: 50%;
+    filter: invert();
+}
+
+/*Footer-Section*/
+
+#social-media-links img{
+    margin-left: 1rem;
+}
+
+#footer-icon img{
+    filter: invert();
+    height: 80px;
+}
+

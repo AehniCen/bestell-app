@@ -1,0 +1,244 @@
+
+@media(max-width: 1323px) {
+    .meal-details {
+        margin-right: 1rem;
+    }
+}
+
+@media(max-width: 1208px) {
+    #order-overlay-content {
+        font-size: 1.5rem;
+    }
+    #order-overlay-content h3{
+        font-size: 1.5rem;
+    }
+}
+
+@media(max-width: 1064px) {
+    #order-overlay-content {
+        font-size: 1.5rem;
+    }
+    #order-overlay-content h3{
+        font-size: 1.5rem;
+    }
+    #finish-order-details button {
+        margin-right: 1rem;
+        line-height: 1.3rem;
+    }
+}
+
+@media(max-width: 974px) {
+    .order-detail p {
+        font-size: 1.5rem;
+    }
+    .basket-total {
+        font-size: 1.5rem;
+    }
+    #p-total {
+        font-size: 1.5rem;
+    }
+    #basket-button {
+        font-size: 1.5rem;
+    }
+
+    #finish-order-name {
+        width: 100%;
+    }
+    
+    #finish-total-button {
+        width: 100%;
+    }
+}
+
+@media(max-width: 929px) {
+    .meal-details p {
+        font-size: 1rem;
+    }
+    .price-section p {
+        font-size: 1rem;
+    }
+    .price-section button {
+       line-height: 0.7;
+    }
+
+    #order-overlay-content {
+        font-size: 1.5rem;
+    }
+    #finish-order-details h3 {
+        font-size: 1.5rem;
+    }
+} 
+
+@media(max-width: 815px) {
+    #order-overlay-content {
+        font-size: 1rem;
+    }
+    #order-overlay-content h3{
+        font-size: 1rem;
+    }
+    #finish-order-details button {
+        margin-right: 1rem;
+        line-height: 1rem;
+    }
+}
+
+
+@media(max-width: 809px) {
+    #basket-headline h3 {
+        font-size: 2.5rem;
+    }
+    #empty-basket-line {
+        font-size: 1.5rem;
+    }
+}
+
+@media(max-width: 783px) {
+    .name {
+        font-size: 1.3rem;
+    }
+    .description {
+        font-size: 1rem;
+    }
+    .price-section p {
+        font-size: 1rem;
+    }
+
+}
+
+@media(max-width: 760px) {
+    #header-icon {
+        height: 60px;
+    }
+    #header-headline h1{
+        font-size: 3rem;
+    }
+    .header-basket-icon {
+        height: 60px;
+    }
+    #meal-sections {
+        flex-direction: column;
+        margin-right: 0;
+    }
+    #offer-section {
+        width: 100%;
+        height: 100%;
+    }
+    #order-section {
+        display: none;
+    }
+}
+
+@media(max-width: 683px) {
+    #finish-order-name p {
+        padding-right: 0.5rem;
+    }
+    #finish-order-details button {
+        margin-right: 0.5rem;
+        line-height: 0.8rem;
+    }
+}
+
+@media(max-width: 629px) {
+    #order-overlay-content {
+        padding: 1rem;
+    }
+}
+
+@media(max-width: 586px) {
+    #amount-counter {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    #count-number {
+        font-size: 1rem;
+    }
+    .main-menu-categorie-links {
+        font-size: 1.5rem;
+    }
+    .meal-headline h2 {
+        font-size: 2rem;
+    }
+    #order-overlay-content {
+        padding: 0.5rem;
+    }
+    #finish-order-name {
+        padding: 0;
+    }
+    #footer-icon img {
+        height: 65px;
+    }
+    #social-media-links img{
+        height: 45px;
+    }
+}
+
+@media(max-width: 526px) {
+    #finish-order-name {
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-columns: auto auto;
+    }
+    #finish-order-details {
+       grid-column: 1/span 2;
+    }
+    #is-the-same {
+        display: flex;
+        justify-content: end;
+    }
+}
+
+@media(max-width: 477px) {
+    #header-headline h1 {
+        font-size: 2.5rem;
+    }
+    .main-menu-categorie-links {
+        font-size: 1rem;
+    }
+    .meal-details {
+        margin-right: 0.5rem;
+    }
+    .meal-details p {
+        font-size: 0.8rem;
+    }
+    .order-section {
+        flex-direction: column;
+    }
+    #footer-icon img {
+        height: 55px;
+    }
+    #social-media-links img{
+        height: 35px;
+    }
+}
+
+@media(max-width: 412px) {
+    #header-headline h1 {
+        font-size: 2rem;
+    }
+}
+
+@media(max-width: 400px) {
+    #finish-order-details button {
+        margin: 0.2rem;
+    }
+}
+
+@media(max-width: 372px) {
+    #header-headline h1 {
+        font-size: 1.5rem;
+    }
+    .main-menu-categorie-links {
+        font-size: 0.7rem;
+    }
+    #finish-order-details {
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-columns: auto auto auto;
+        justify-content: center;
+    }
+    #finish-order-details h3{
+        grid-column: 1/span 3;
+        text-align: center;
+    }
+}
+

@@ -1,0 +1,96 @@
+@font-face {
+    font-family: "Protest Revolution";
+    src: url(./assets/fonts/ProtestRevolution-Regular.ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Big Shoulders Stencil";
+    src: url(./assets/fonts/BigShouldersStencil-VariableFont_opsz,wght.ttf);
+    font-weight: 900;
+    font-style: normal;
+}
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(56, 12, 12, 0.993); 
+  border: 2px;
+  border-style: solid;
+  border-color: rgba(56, 12, 12, 0.993);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(71, 16, 16, 0.993); 
+  border: 2px;
+  border-style: solid;
+  border-color: rgba(56, 12, 12, 0.993);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(88, 20, 20, 0.993); 
+  cursor: grab;
+}
+
+::-webkit-scrollbar-thumb:active {
+    cursor: grabbing;
+}
+
+html {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    font-family: "Big Shoulders Stencil";
+    color: rgb(255, 255, 255, 0.8);
+}
+
+h1 {
+    font-family: "Big Shoulders Stencil";
+    color: rgb(255, 255, 255, 0.8);
+    margin-block-start: 0;
+    margin-block-end: 0;
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 3.5rem;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding: 1rem;
+}
+
+h3 {
+  
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+button {
+    margin: 0.5rem;
+    background-color: rgb(255, 255, 255, 0.6) ;
+    border-style: solid;
+    border-color: white;
+    opacity: 90%;
+    cursor: pointer;
+}
+
+.block {
+  display: block;
+}
+
+.d_none {
+    display: none;
+}
