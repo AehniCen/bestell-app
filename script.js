@@ -20,7 +20,6 @@ function renderOffer() {
 
 function toggleBasketOverlay() {
     let orderOverlay = document.getElementById('order-section');
-
     if (orderOverlay.style.display === 'none' || orderOverlay.style.display === '') {
         orderOverlay.style.display = 'block';
     } else {
@@ -35,7 +34,6 @@ function toggleOverlay() {
       overlay.style.display = 'flex';
     } else {
       overlay.style.display = 'none';
-
       if (paymentDone) {
             myBasket = [];
             renderFinish();
@@ -49,7 +47,6 @@ function toggleOverlay() {
 function renderBasket() {
     let basketOverlay = document.getElementById('basket-section');
     basketOverlay.innerHTML= '';
-
     if (myBasket.length === 0) {
         basketOverlay.innerHTML= '<p id="empty-basket-line">Der Warenkorb ist leer.</p>';
         return;
@@ -57,14 +54,12 @@ function renderBasket() {
     myBasket.forEach((item, index) => {
         basketOverlay.innerHTML += basketTemplate(item, index);
     });
-
     let total = myBasket.reduce((sum, item) => sum + item.price * item.amount, 0);
     basketOverlay.innerHTML += `<p id="p-total"><str>Gesamt: ${total.toFixed(2)} €</str></p><button class="complete-order" id="basket-button" onclick="toggleOverlay()">Bestellung<br>abschließen</button>` 
 }
 
 function addToBasket(name, price) {
     let item = myBasket.find(i => i.name === name);
-
     if (item) {
         item.amount++;
     } else {
@@ -74,41 +69,38 @@ function addToBasket(name, price) {
             amount: 1
         });
     }
-
-    renderBasketFinish();
-    updateBasketAmount();
+    renderUpdateBasket()
 }
 
 function increaseAmount(index) {
     myBasket[index].amount ++;
-
-    renderBasketFinish();
-    updateBasketAmount();
+    renderUpdateBasket()
 }
 
 function decreaseAmount(index) {
-    if (myBasket[index].amount > 1) {
+    if (!myBasket[index]) {
+        return;
+    }
+    
+    if (myBasket[index].amount < 1) {
+        return;
+    } else if (myBasket[index].amount > 1) {
         myBasket[index].amount --;
     } else {
         myBasket.splice(index, 1);
     }
-
-    renderBasketFinish();
-    updateBasketAmount();
+    renderUpdateBasket()
 }
 
 function deleteItem(index) {
    myBasket.splice(index, 1);
-
-   renderBasketFinish();   
-   updateBasketAmount();
+   renderUpdateBasket()
 }
 
 function updateBasketAmount() {
     let amountCounterRef = document.getElementById("amount-counter");
     let countNumberRef = document.getElementById("count-number");
     let basketAmount = myBasket.reduce((sum, item) => sum + item.amount, 0);
-
     if (basketAmount === 0) {
         amountCounterRef.style.display = "none";
     } else {
@@ -119,9 +111,7 @@ function updateBasketAmount() {
 
 function renderFinish() {
     let finishOverlay = document.getElementById('order-overlay-content');
-    
     finishOverlay.innerHTML= '';
-
     if (myBasket.length === 0) {
         finishOverlay.innerHTML+= '<div id="order-overlay-empty"><p>Der Warenkorb ist leer.</p></div>';
         return;
@@ -129,7 +119,6 @@ function renderFinish() {
     myBasket.forEach((item, index) => {
         finishOverlay.innerHTML += finishTemplate(item, index);
     });
-
     let total = myBasket.reduce((sum, item) => sum + item.price * item.amount, 0);
     finishOverlay.innerHTML += `<div id="finish-total-button"><p id="p-total-finish">Gesamt: ${total.toFixed(2)} €</p><button class="complete-order" id="finish-button" onclick="finishPayment()">Bestellen</button>`
 }
@@ -145,7 +134,6 @@ function addToFinish(name, price) {
             amount: 1
         });
     }
-
     renderBasketFinish();
 }
 
@@ -153,22 +141,19 @@ function finishPayment() {
     let basketOverlay = document.getElementById('basket-section');
     let finishOverlay = document.getElementById('order-overlay-content');
     let amountCounterRef = document.getElementById("amount-counter");
-
     basketOverlay.innerHTML= '';
     finishOverlay.innerHTML= '';
     amountCounterRef.style.display = "none";
-
-    finishOverlay.innerHTML= `
-    <div id="finish-payment">
-        <img id="success-gif" src="./assets/gifs/success-self.gif">
-        <p>Bestellung erfolgreich</p>
-    </div>
-    `;
-
+    finishOverlay.innerHTML+= finishOverlayTemplate() ;
     paymentDone = true;
 }
 
 function renderBasketFinish() {
     renderBasket();
     renderFinish();
+}
+
+function renderUpdateBasket() {
+    renderBasketFinish();
+    updateBasketAmount();
 }

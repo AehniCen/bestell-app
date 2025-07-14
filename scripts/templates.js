@@ -10,7 +10,6 @@ function offerTemplate(title, myArray, image) {
 
     for (let i = 0; i < myArray.length; i++) {
         let indexArray = myArray[i];
-
         staticContent += `
         <div class="order-section">
             <div class="meal-details">
@@ -60,6 +59,15 @@ function finishTemplate(item, index) {
                 <p id="is-the-same"> =</p>
                 <p>${(item.price * item.amount).toFixed(2)} €</p>
         </div>
+    </div>
+    `
+}
+
+function finishOverlayTemplate() {
+    return `
+    <div id="finish-payment">
+        <img id="success-gif" src="./assets/gifs/success-self.gif">
+        <p>Bestellung erfolgreich</p>
     </div>
     `
 }

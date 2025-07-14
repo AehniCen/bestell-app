@@ -52,6 +52,12 @@
 
 /*basket-section*/
 
+#close-button-div {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
 .button-delete {
     width: max-content;
     margin: 0;
