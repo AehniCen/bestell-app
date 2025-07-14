@@ -18,6 +18,16 @@ function renderOffer() {
     dipsRef.innerHTML += offerTemplate('Dips', myDip, './assets/img/sauce_640.jpg')
 }
 
+function toggleBasketOverlay() {
+    let orderOverlay = document.getElementById('order-section');
+
+    if (orderOverlay.style.display === 'none' || orderOverlay.style.display === '') {
+        orderOverlay.style.display = 'block';
+    } else {
+        orderOverlay.style.display = 'none';
+    }
+}
+
 function toggleOverlay() {
     let basketOverlay = document.getElementById('basket-section');
     const overlay = document.getElementById('order-overlay-section');
@@ -50,7 +60,6 @@ function renderBasket() {
 
     let total = myBasket.reduce((sum, item) => sum + item.price * item.amount, 0);
     basketOverlay.innerHTML += `<p id="p-total"><str>Gesamt: ${total.toFixed(2)} €</str></p><button class="complete-order" id="basket-button" onclick="toggleOverlay()">Bestellung<br>abschließen</button>` 
-
 }
 
 function addToBasket(name, price) {
@@ -82,7 +91,6 @@ function decreaseAmount(index) {
         myBasket[index].amount --;
     } else {
         myBasket.splice(index, 1);
-
     }
 
     renderBasketFinish();

@@ -8,6 +8,8 @@
 .header-basket-icon {
     height: 4rem;
     filter: invert();
+    border-style: solid;
+    border-width: 2px;
 }
 
 .offer-menu-icon:hover {
@@ -20,11 +22,6 @@
     margin: 0;
 }
 
-#basket-amount-icon {
-    display: flex;
-    justify-content: flex-end;
-}
-
 #amount-counter {
     justify-content: flex-end;
     align-items: center;
@@ -35,8 +32,10 @@
 
 #count-number {
     font-family: "Protest Revolution";
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: white;
+    position: relative;
+    left: 3px;
 }
 
 /*offer-section*/

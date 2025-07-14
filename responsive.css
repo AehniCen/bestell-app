@@ -25,6 +25,10 @@
         margin-right: 1rem;
         line-height: 1.3rem;
     }
+    .order-section {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
 }
 
 @media(max-width: 974px) {
@@ -52,10 +56,10 @@
 
 @media(max-width: 929px) {
     .meal-details p {
-        font-size: 1rem;
+        font-size: 20px;
     }
     .price-section p {
-        font-size: 1rem;
+        font-size: 20px;
     }
     .price-section button {
        line-height: 0.7;
@@ -67,18 +71,32 @@
     #finish-order-details h3 {
         font-size: 1.5rem;
     }
+    #order-section {
+        position: absolute;
+        top: 5%;
+        left: 30%;
+        width: 50%;
+        height: 80%;
+    }
+    #empty-basket-line {
+        padding-top: 10rem;
+    }
 } 
 
 @media(max-width: 815px) {
     #order-overlay-content {
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
     #order-overlay-content h3{
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
     #finish-order-details button {
         margin-right: 1rem;
         line-height: 1rem;
+    }
+    .order-section {
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 }
 
@@ -115,16 +133,23 @@
     .header-basket-icon {
         height: 60px;
     }
-    #meal-sections {
-        flex-direction: column;
-        margin-right: 0;
+    #finish-order-name {
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-columns: auto auto;
     }
-    #offer-section {
-        width: 100%;
-        height: 100%;
+    #finish-order-details {
+       grid-column: 1/span 2;
     }
-    #order-section {
-        display: none;
+    #is-the-same {
+        display: flex;
+        justify-content: end;
+    }
+    #order-overlay-content {
+        font-size: 20px;
+    }
+    #order-overlay-content h3{
+        font-size: 20px;
     }
 }
 
@@ -135,6 +160,10 @@
     #finish-order-details button {
         margin-right: 0.5rem;
         line-height: 0.8rem;
+    }
+    .order-section {
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
@@ -155,6 +184,13 @@
     .main-menu-categorie-links {
         font-size: 1.5rem;
     }
+    .order-section {
+        flex-direction: column;
+        align-items: center;
+    }
+    .meal-details {
+        width: 100%;
+    }
     .meal-headline h2 {
         font-size: 2rem;
     }
@@ -173,17 +209,9 @@
 }
 
 @media(max-width: 526px) {
-    #finish-order-name {
-        display: grid;
-        grid-template-rows: auto auto;
-        grid-template-columns: auto auto;
-    }
-    #finish-order-details {
-       grid-column: 1/span 2;
-    }
-    #is-the-same {
-        display: flex;
-        justify-content: end;
+    #order-section {
+        left: 20%;
+        width: 70%;
     }
 }
 
@@ -198,16 +226,19 @@
         margin-right: 0.5rem;
     }
     .meal-details p {
-        font-size: 0.8rem;
-    }
-    .order-section {
-        flex-direction: column;
+        font-size: 16px;
     }
     #footer-icon img {
         height: 55px;
     }
     #social-media-links img{
         height: 35px;
+    }
+    #order-overlay-content {
+        font-size: 16px;
+    }
+    #order-overlay-content h3{
+        font-size: 16px;
     }
 }
 
@@ -220,6 +251,11 @@
 @media(max-width: 400px) {
     #finish-order-details button {
         margin: 0.2rem;
+    }
+    .order-detail {
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-columns: auto auto auto;
     }
 }
 
@@ -239,6 +275,13 @@
     #finish-order-details h3{
         grid-column: 1/span 3;
         text-align: center;
+    }
+}
+
+@media(min-width: 1938px) {
+    .order-section {
+        padding-left: 6rem;
+        padding-right: 6rem;
     }
 }
 
